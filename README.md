@@ -1,5 +1,4 @@
 # For a Headless CMS using WordPress and Gatsby
-<h1>For a Headless CMS using WordPress and Gatsby</h1>
 <p>For a headless WordPress setup using Gatsby and GitHub Pages, you should install WordPress in a subdomain rather than the main directory.<?p>
 
 <ol>
