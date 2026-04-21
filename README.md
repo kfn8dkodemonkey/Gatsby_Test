@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  Gatsby's default starter for a Headless CMS using WordPress + Gatsby + Github
 </h1>
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
@@ -53,7 +53,7 @@ The github repo should live with in the user or organization. Create a branch/re
 ## Point Hosting to github ##
 Go back to the hosting to update the DNS for the Domain. Remove any A records where domain.com or www.domain.com point to the hosting ip. leave the ftp or main and all the there weird ones. Add githubs ips for domain.com and a CNAME for www.domain.com this will point to the username.github.io or organization.github.io
 
-# Compleate Headless CMS using WordPress + Gatsby + Github
+# Error - Page or site not working
 If it is not working verify githubs Custom domain does not have an error. 
 If it does not has a green checkmark you may need to wait 1 hr for dns propigation.
 
