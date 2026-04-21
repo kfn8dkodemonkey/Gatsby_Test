@@ -53,7 +53,7 @@ The github repo should live with in the user or organization. Create a branch/re
 ## Point Hosting to github ##
 Go back to the hosting to update the DNS for the Domain. Remove any A records where domain.com or www.domain.com point to the hosting ip. leave the ftp or main and all the there weird ones. Add githubs ips for domain.com and a CNAME for www.domain.com this will point to the username.github.io or organization.github.io
 
-# You should have a Headless CMS using WordPress + Gatsby + Github
+# Compleate Headless CMS using WordPress + Gatsby + Github
 If it is not working verify githubs Custom domain does not have an error. 
 If it does not has a green checkmark you may need to wait 1 hr for dns propigation.
 
