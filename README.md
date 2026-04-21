@@ -1,3 +1,18 @@
+# For a Headless CMS using WordPress and Gatsby
+<h1>For a Headless CMS using WordPress and Gatsby</h1>
+<p>For a headless WordPress setup using Gatsby and GitHub Pages, you should install WordPress in a subdomain rather than the main directory.<?p>
+
+<ol>
+<li>Install Wordpress in your hosting in a subdomain [Subdomain.example.com]</li>
+<li>Plugins: You must install WPGraphQL and WPGatsby on your WordPress instance to turn it into a valid data source for Gatsby.</li>
+<li>Follow Gatsby install below for the start site. Update Gatsby Config: In your Gatsby project, you will point the gatsby-source-wordpress plugin to this specific subdirectory URL (e.g., https://yourd-sub-domain.com/graphql) to fetch your content. You may need to run: npm gatsby-source-wordpress to install it.</li>
+<li>In github your repo should live with in your user or organization. Create a branch/repo to use with github pages. Most use gh-page. In the repo go to settings -> pages: under build and deployment set branch to gh-page. Under Custom domain this is your main url the "domain.com" not the subdomain. This will create a CNAME file if you do not have one. Veify the url in the file is just the domaine name not www or http prefexis. If There is not one you will need to create it CNAME in the file domain.com thats it save push and build.</li>
+<li>Go back to the hosting to update the DNS for the Domain. Remove any A records where domain.com or www.domain.com point to the hosting ip. leave the ftp or main and all the there weird ones. Add githubs ips for domain.com and a CNAME for www.domain.com this will point to the username.github.io or organization.github.io</li>
+</ol>
+
+<p>That should give you a base headless set up check your domain.com if it is not working verify githubs Custom domain does not have an error. If it has a grenn check then you may need to wait 1 hr for dns propigation.</p>
+
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
@@ -97,6 +112,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web. And also the best place to build, deploy, and host your Gatsby sites.
 
 <!-- AUTO-GENERATED-CONTENT:END -->
-# Gatsby_Test
-# Gatsby_Test
-# Gatsby_Test
+
