@@ -1,17 +1,3 @@
-# For a Headless CMS using WordPress and Gatsby
-<p>For a headless WordPress setup using Gatsby and GitHub Pages, you should install WordPress in a subdomain rather than the main directory.<?p>
-
-<ol>
-<li>Install Wordpress in your hosting in a subdomain [Subdomain.example.com]</li>
-<li>Plugins: You must install WPGraphQL and WPGatsby on your WordPress instance to turn it into a valid data source for Gatsby.</li>
-<li>Follow Gatsby install below for the start site. Update Gatsby Config: In your Gatsby project, you will point the gatsby-source-wordpress plugin to this specific subdirectory URL (e.g., https://yourd-sub-domain.com/graphql) to fetch your content. You may need to run: npm gatsby-source-wordpress to install it.</li>
-<li>In github your repo should live with in your user or organization. Create a branch/repo to use with github pages. Most use gh-page. In the repo go to settings -> pages: under build and deployment set branch to gh-page. Under Custom domain this is your main url the "domain.com" not the subdomain. This will create a CNAME file if you do not have one. Veify the url in the file is just the domaine name not www or http prefexis. If There is not one you will need to create it CNAME in the file domain.com thats it save push and build.</li>
-<li>Go back to the hosting to update the DNS for the Domain. Remove any A records where domain.com or www.domain.com point to the hosting ip. leave the ftp or main and all the there weird ones. Add githubs ips for domain.com and a CNAME for www.domain.com this will point to the username.github.io or organization.github.io</li>
-</ol>
-
-<p>That should give you a base headless set up check your domain.com if it is not working verify githubs Custom domain does not have an error. If it has a grenn check then you may need to wait 1 hr for dns propigation.</p>
-
-
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
@@ -27,18 +13,21 @@ Kick off your project with this default boilerplate. This starter ships with the
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
 
 ## 🚀 Quick start
+    For a headless WordPress setup using Gatsby and GitHub Pages.
 
-1.  **Create a Gatsby site.**
+1.  **Create a Headless Wordpress using a Gatsby site.**
+    Install WordPress in a subdomain rather than the main directory. [Subdomain.example.com] 
+    You will need to install the following Plugins: WPGraphQL and WPGatsby on your WordPress instance to turn it into a valid data source for Gatsby.
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#gatsby-cli)) to create a new site, specifying the default starter.
-
+    **Set up Gatsby Instance**
+    Use the Gatsby CLI to clone this repo:
+    
     ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    # create a new Gatsby site by cloning this repo
+    gh repo clone kfn8dkodemonkey/Gatsby_Test your_file_name
     ```
 
-1.  **Start developing.**
-
+1.  **Verify The site on Localhost**
     Navigate into your new site’s directory and start it up.
 
     ```shell
@@ -46,19 +35,27 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     gatsby develop
     ```
 
-1.  **Open the source code and start editing!**
-
     Your site is now running at `http://localhost:8000`!
 
     Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries).
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+1. **Install**
+   ```shell
+   npm insstall gatsby-source-wordpress 
+   ```
 
-## 🚀 Quick start (Netlify)
+1. **Open the source code and start editing!**
+   Open `Project` directory in your code editor of choice and edit `gatsby-config`. Update gatsby-source-wordpress url to the `subdomain.domain.com/grapql`.
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+## 🚀 Github
+The github repo should live with in the user or organization. Create a branch/repo to use with github pages. Most use gh-page. In the repo go to `settings -> pages:` under build and deployment set branch to gh-page. Under Custom domain enter your main url the "domain.com" not the subdomain. This will create a CNAME file if you do not have one. Veify the url in the file is just the domain name not www or http prefexis. If There is not one you will need to create it CNAME in the file domain.com thats it save, push, and build.
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+## Point Hosting to github ##
+Go back to the hosting to update the DNS for the Domain. Remove any A records where domain.com or www.domain.com point to the hosting ip. leave the ftp or main and all the there weird ones. Add githubs ips for domain.com and a CNAME for www.domain.com this will point to the username.github.io or organization.github.io
+
+# You should have a Headless CMS using WordPress + Gatsby + Github
+If it is not working verify githubs Custom domain does not have an error. 
+If it does not has a green checkmark you may need to wait 1 hr for dns propigation.
 
 ## 🧐 What's inside?
 
